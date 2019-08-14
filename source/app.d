@@ -188,6 +188,7 @@ void main()
 	settings.port = 8005;
 	settings.sessionStore = new MemorySessionStore;
 	settings.useCompressionIfPossible = true;
+	settings.sessionOptions |= SessionOption.sameSiteStrict;
 	readOption("bind", &settings.bindAddresses[0], "Sets the address used for serving.");
 	readOption("port|p", &settings.port, "Sets the port used for serving.");
 
